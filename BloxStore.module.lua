@@ -26,7 +26,7 @@ local debugMode = false
 --[[
 	@description Encodes the data to be sent in the POST request
 	@param data: The table of data
-	@resturns string: The data that is encoded for POST requests
+	@returns string: The data that is encoded for POST requests
 --]]
 function BloxStore:buildQuery(data)
 	local built = ""
@@ -79,7 +79,7 @@ end
 	@description Sends a POST request to the BloxStore API
 	@param path: The path starting with / with the endpoint
 	@param requestData: The encoded post data
-	@resturns table: The JSON response from the API decoded
+	@returns table: The JSON response from the API decoded
 --]]
 function BloxStore:sendApiRequest(path, requestData)
 	local response = httpService:PostAsync(
@@ -97,7 +97,7 @@ end
 	@description Runs an SQL statement on the table
 	@param tableKey: (Optional) The table key for the table to run the statement on
 	@param query: The SQL statement to run on the API
-	@resturns table: The JSON response from the API decoded
+	@returns table: The JSON response from the API decoded
 --]]
 function BloxStore:runSQL(...)
 	local args = {...}
@@ -128,7 +128,7 @@ end
 	@param tableKey: (Optional) The table key for the table to run the statement on
 	@param query: The SQL statement to run on the API
 	@param values: The values in a table for the prepared statement
-	@resturns table: The JSON response from the API decoded
+	@returns table: The JSON response from the API decoded
 --]]
 function BloxStore:runPreparedSQL(...)
 	local args = {...}
